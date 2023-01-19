@@ -1,9 +1,304 @@
 
 Assignment: CS112 Lab1
-Student names:
-Student userids:
+Student names: Alvin Waigwa
+Student userids: 10004380
 
 -------------------------------------------
 
-Step 1. ----------------- <time> -----------------------
+Step 1. if statement practice <time> 20 mins
 
+#include <iostream>
+using namespace std;
+int main() {
+cout<< " Enter your grade: ";
+unsigned int Grade;
+cin >> Grade;
+if(Grade >= 90){
+cout << " Your grade is A ";
+}
+else if(Grade >= 80 && Grade < 90 ){
+cout << " Your grade is B ";
+}
+else if(Grade >= 70 && Grade < 80 ){
+cout << " Your grade is C ";
+}
+else if(Grade >= 60 && Grade < 70 ){
+cout << " Your grade is D ";
+}
+else{cout << " Your grade is F ";}
+
+    return 0;
+}
+
+Step 1(b). Output <time> -----------------------
+
+ Enter your grade: 90
+ Your grade is A
+
+
+Step 2. If statement practice <time> 22 mins
+
+#include <iostream>
+using namespace std;
+int main() {
+string PlanName;
+cout<< " Enter your desired plan ";
+cin >> PlanName;
+unsigned int NumberOfMonths;
+cout<< " Enter number of months ";
+cin >> NumberOfMonths;
+
+if(PlanName == "silver" && NumberOfMonths == 1){
+cout << " The cost of your plan is $90 ";
+}
+else if(PlanName == "silver" && NumberOfMonths >= 2 ){
+cout << " The cost of your plan is $60  ";
+}
+else if(PlanName == "gold" && NumberOfMonths == 1 ){
+cout << " The cost of your plan is $90 ";
+}
+else if(PlanName == "gold" && NumberOfMonths >= 2 && NumberOfMonths < 6 ){
+cout << " The cost of your plan is $70 ";
+}
+else if(PlanName == "gold" && NumberOfMonths >= 7 ){
+cout << " The cost of your plan is $35 ";
+}
+
+    return 0;
+}
+
+Step 2(b). Output <time> -----------------------
+
+ Enter your desired plan: gold
+ Enter number of months: 4
+ The cost of your plan is $70 
+
+Step 3. while loop practice <time> 17 mins
+
+#include <iostream>
+using namespace std;
+int main() {
+string PlanName;
+cout<< " Enter your desired plan: ";
+cin >> PlanName;
+unsigned int NumberOfMonths;
+cout<< " Enter number of months: ";
+cin >> NumberOfMonths;
+while(PlanName != "gold" && PlanName != "silver") {  
+cout << " I'm sorry, \""<< PlanName << "\" is not a known plan.\n";
+cout << " Please enter a plan name: ";
+cin >> PlanName;
+}
+if(PlanName == "silver" && NumberOfMonths == 1){
+cout << " The cost of your plan is $90 ";
+}
+else if(PlanName == "silver" && NumberOfMonths >= 2 ){
+cout << " The cost of your plan is $60  ";
+}
+else if(PlanName == "gold" && NumberOfMonths == 1 ){
+cout << " The cost of your plan is $90 ";
+}
+else if(PlanName == "gold" && NumberOfMonths >= 2 && NumberOfMonths < 6 ){
+cout << " The cost of your plan is $70 ";
+}
+else if(PlanName == "gold" && NumberOfMonths >= 7 ){
+cout << " The cost of your plan is $35 ";
+}
+
+    return 0;
+}
+
+Step 3(b). Output <time> -----------------------
+
+ Enter your desired plan: maroon
+ Enter number of months: 3
+ I'm sorry, "maroon" is not a known plan.
+ Please enter a plan name: green
+ I'm sorry, "green" is not a known plan.
+ Please enter a plan name: gold
+ The cost of your plan is $70 
+
+Step 4. switch statement <time> 32 mins
+
+#include <iostream>
+using namespace std;
+int main() {
+char letter;
+cout << "Enter a lower case letter: ";
+cin >> letter;
+switch(letter){
+case 'a':
+  cout << "The letter is a vowel";
+  break;
+case 'e':
+  cout << "The letter is a vowel";
+  break;
+case 'i':
+  cout << "The letter is a vowel";
+  break;
+case 'o':
+  cout << "The letter is a vowel";
+  break;
+case 'u':
+  cout << "The letter is a vowel";
+  break;
+case 'y':
+  cout << "The letter is a vowel";
+  break;
+default:
+  cout << "The letter is a constant";
+}
+    return 0;
+}
+
+
+Step 4(b). Output <time> -----------------------
+
+Enter a lower case letter: a
+The letter is a vowel
+
+Enter a lower case letter: f
+The letter is a constant
+
+Step 5.  for loop <time> 14 mins
+
+#include <cassert>
+#include <iostream>
+using namespace std;
+int main() { 
+unsigned values[8];
+for (int i = 0; i < 8; i++) {
+    values[i] = i * 7;
+}
+assert(values[0] == 0);
+assert(values[3] == 21);
+assert(values[7] == 49);
+cout << "All tests passed!";
+
+    return 0;
+}
+
+Step 5(b). Output <time> -----------------------
+
+All tests passed!
+
+Step 6.for loop <time> -----------------------
+
+#include <iostream>
+using namespace std;
+int main() { 
+double values[100];
+for(int i=0; i<100;i++){
+    values[i] = i * 0.1;
+}
+
+double sum = 0;
+for(int i = 99; i >= 0; i--){
+    sum += values[i];
+
+}
+cout<< sum << endl;
+    return 0;
+}
+
+Step 6(b). Output <time> -----------------------
+
+495
+
+Step 7.defining a function <time> -----------------------
+
+
+#include <iostream>
+using namespace std;
+
+bool isVowel(char letter) {
+    switch(letter) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+        case 'y':
+            return true;
+        default:
+            return false;
+    }
+}
+
+int main() {
+    char letter;
+    cout << "Enter a lower case letter: ";
+    cin >> letter;
+    if (isVowel(letter)) {
+        cout << "The letter is a vowel";
+    } else {
+        cout << "The letter is a constant";
+    }
+    return 0;
+}
+
+Step 7(b). Output <time> -----------------------
+
+Enter a lower case letter: a
+The letter is a vowel%  
+
+Step 8.defining a function<time> -----------------------
+
+#include <iostream>
+using namespace std;
+
+string getPlan() {
+    string PlanName;
+    cout<< " Enter your desired plan: ";
+    cin >> PlanName;
+    while(PlanName != "gold" && PlanName != "silver") {  
+        cout << " I'm sorry, \""<< PlanName << "\" is not a known plan.\n";
+        cout << " Please enter a plan name: ";
+        cin >> PlanName;
+    }
+    return PlanName;
+}
+
+unsigned int getMonths() {
+    unsigned int NumberOfMonths;
+    cout<< " Enter number of months: ";
+    cin >> NumberOfMonths;
+    return NumberOfMonths;
+}
+
+unsigned int computeCost(string PlanName, unsigned int NumberOfMonths) {
+    if(PlanName == "silver" && NumberOfMonths == 1){
+        return 90;
+    }
+    else if(PlanName == "silver" && NumberOfMonths >= 2 ){
+        return 60;
+    }
+    else if(PlanName == "gold" && NumberOfMonths == 1 ){
+        return 90;
+    }
+    else if(PlanName == "gold" && NumberOfMonths >= 2 && NumberOfMonths < 6 ){
+        return 70;
+    }
+    else if(PlanName == "gold" && NumberOfMonths >= 7 ){
+        return 35;
+    }
+    return 0;
+}
+
+int main() {
+    string PlanName = getPlan();
+    unsigned int NumberOfMonths = getMonths();
+    unsigned int cost = computeCost(PlanName, NumberOfMonths);
+    cout << "The cost of your plan is $" << cost;
+    return 0;
+}
+
+Step 8(b). Output <time> -----------------------
+
+ Enter your desired plan: maroon
+ I'm sorry, "maroon" is not a known plan.
+ Please enter a plan name: red
+ I'm sorry, "red" is not a known plan.
+ Please enter a plan name: gold
+ Enter number of months: 1
+The cost of your plan is $90
